@@ -81,11 +81,11 @@ async function build() {
 
     log('Building renderer process')
     await execa('next', ['build', path.join(cwd, rendererSrcDir)], execaOptions)
-    await execa(
-      'next',
-      ['export', '-o', appdir, path.join(cwd, rendererSrcDir)],
-      execaOptions
-    )
+    // await execa(
+    //   'next',
+    //   ['export', '-o', appdir, path.join(cwd, rendererSrcDir)],
+    //   execaOptions
+    // )
 
     log('Building main process')
     await execa(
